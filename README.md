@@ -13,12 +13,12 @@ This project is centered around the development of a machine learning model that
 
 ## Project Structure
 
-- `data/`: Directory where datasets are stored.
-- `notebooks/`: Jupyter notebooks for data exploration, preprocessing, model training, and evaluation.
-- `models/`: Directory for saving trained models and checkpoints.
-- `scripts/`: Python scripts for data preprocessing, training the model, and running predictions.
-- `README.md`: Project documentation.
-- `requirements.txt`: List of dependencies needed to run the project.
+- `data/`:
+  - `sign_mnist_test.csv`: Test dataset for evaluating the model.
+  - `sign_mnist_train.csv`: Training dataset for model training.
+- `Sign_Language_Detection.ipynb`: Jupyter notebook for data exploration, model training, and evaluation.
+- `sign_language_mnist_cnn.keras`: Saved model file.
+- `snip.jpg`: Sample test image from an external source.
 
 ## Setup Instructions
 
@@ -26,10 +26,10 @@ This project is centered around the development of a machine learning model that
 
 - Python 3.7+
 - TensorFlow/Keras
-- OpenCV
 - NumPy
 - Matplotlib
 - Scikit-learn
+- Pandas
 
 ### Installation
 >[!TIP]
@@ -50,7 +50,7 @@ You Can Directly Download [`Sign_Language_Detection.ipynb`](https://github.com/D
 
 ## Usage
 
- - **Data Preprocessing:** Use the scripts in the scripts/ folder or Jupyter notebooks to preprocess the data (e.g., resizing images, applying data augmentation).
+ - **Data Preprocessing:** Use the scripts in the `scripts/` folder or Jupyter notebooks to preprocess the data (e.g., resizing images, applying data augmentation).
 
  - **Model Training:** Run the training script or use a Jupyter notebook to train the CNN model on the prepared dataset.
 
@@ -64,22 +64,41 @@ You Can Directly Download [`Sign_Language_Detection.ipynb`](https://github.com/D
    ```bash
    python scripts/train_model.py
    ```
- - **Evaluate the Model:**
+ - **Install Dependencies:**
    ```bash
-   python scripts/evaluate_model.py
+   pip install -r requirements.txt
    ```
+ - **Download and Prepare Dataset:**
+   The dataset files (sign_mnist_test.csv and sign_mnist_train.csv) are already included in the data/ directory.
+
+## Usage
+
+ 1. **Data Preprocessing:** Use the Jupyter notebook to preprocess data, including resizing images and applying data augmentation.
+
+ 2. **Model Training:** Train the CNN model using the provided Jupyter notebook.
+
+ 3. **Evaluation:** Evaluate model performance on test data as described in the notebook.
+
+ 4.**Inference:** Use the trained model to make predictions on new ASL images, such as snip.jpg.
+
+## Example Commands
+
+ - **Train the Model:**
+   Follow instructions in the Jupyter notebook for training
+
+ - **Evaluate the Model:*
+   Follow instructions in the Jupyter notebook for evaluation
+ 
  - **Run Inference:**
-   ```bash
-   python scripts/predict.py --image_path "path_to_image"
-   ```
+   Follow instructions in the Jupyter notebook to predict using 'snip.jpg'
 
 ## Results
 
-The model achieves significant accuracy in classifying ASL signs, demonstrating potential for real-world applications in communication aids and educational tools.
+The model achieves high accuracy in classifying ASL signs, showing promise for real-world applications in communication aids and educational tools.
 
 ## Contributing
 
-Contributions are encouraged! Feel free to fork the repository, make your changes, and submit a pull request.
+Contributions are welcome! Fork the repository, make your changes, and submit a pull request.
 
 ## License
 
